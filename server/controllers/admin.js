@@ -14,9 +14,10 @@ const handleAdminLogin = async (req, res) => {
         generateTokenAndAdminCookie(res, admin);
 
         res.clearCookie("token", {
-            httpOnly: true,      // Prevents JavaScript access (recommended for auth)
-            // Or "None" if using cross-origin with credentials
-            maxAge: 7 * 24 * 60 * 60 * 1000, // Optional: 7 days
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
+            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
+            maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         })
 
 
@@ -31,9 +32,10 @@ const handleAdminLogout = async (req, res) => {
     try {
 
         res.clearCookie("adminToken", {
-            httpOnly: true,      // Prevents JavaScript access (recommended for auth)
-            // Or "None" if using cross-origin with credentials
-            maxAge: 7 * 24 * 60 * 60 * 1000, // Optional: 7 days
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
+            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
+            maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         });
 
         res.status(200).json("LogOut Successfully")

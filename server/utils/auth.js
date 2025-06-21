@@ -7,12 +7,13 @@ const generateTokenAndCookie = (res, user) => {
         email: user.email,
     }
     const token = jwt.sign(payload, process.env.JWT_SECRET);
-    console.log(token)
     res.cookie("token", token, {
-        httpOnly: true,      // Prevents JavaScript access (recommended for auth)
-        // Or "None" if using cross-origin with credentials
-        maxAge: 7 * 24 * 60 * 60 * 1000, // Optional: 7 days
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
+        sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
+        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
     });
+
 
 }
 
