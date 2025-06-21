@@ -33,9 +33,9 @@ const handleLoginUser = async (req, res) => {
 
         res.clearCookie("adminToken", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
-            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
-            maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+            secure: true,                  // MUST be true for SameSite=None
+            sameSite: "None",              // Required for cross-origin
+            maxAge: 7 * 24 * 60 * 60 * 1000,
         })
 
         // ✅ Remove password before sending user object
@@ -53,9 +53,9 @@ const handleLogoutUser = (req, res) => {
     try {
         res.clearCookie("token", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
-            sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
-            maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+            secure: true,                  // MUST be true for SameSite=None
+            sameSite: "None",              // Required for cross-origin
+            maxAge: 7 * 24 * 60 * 60 * 1000,
         })
         return res.status(200).json({ message: "Logout Successfully!" })
     } catch (error) {

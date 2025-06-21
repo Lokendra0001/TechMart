@@ -8,11 +8,11 @@ const generateTokenAndAdminCookie = (res, admin) => {
         email: admin.email,
     }
     const token = jwt.sign(payload, process.env.JWT_SECRET);
-    res.cookie("adminToken", token, {
+    res.cookie("adminToken", token, token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
-        sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
-        maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+        secure: true,                  // MUST be true for SameSite=None
+        sameSite: "None",              // Required for cross-origin
+        maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
 }
