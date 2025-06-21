@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../../store/slices/authSlice";
+import apiObj from "../../config";
 
 const CartCard = ({
   product,
@@ -16,6 +17,7 @@ const CartCard = ({
   const [localQty, setQty] = useState(qty);
   const user = useSelector((state) => state.auth.user);
   const [deliveryDate, setDeliveryDate] = useState("");
+  const API = apiObj.apiString;
 
   useEffect(() => {
     if (!orderDate) return;
@@ -51,7 +53,7 @@ const CartCard = ({
     e.preventDefault();
     e.stopPropagation();
     axios
-      .patch("http://localhost:3000/user/deleteProduct", {
+      .patch(`${API}/user/deleteProduct`, {
         id: product?._id,
         userId: user?._id,
       })
@@ -64,7 +66,7 @@ const CartCard = ({
   const handleQtyChange = async () => {
     if (onQtyChange) onQtyChange(false);
     axios
-      .patch("http://localhost:3000/user/updateQty", {
+      .patch(`${API}/user/updateQty`, {
         id: product?._id,
         userId: user?._id,
         qty: localQty,

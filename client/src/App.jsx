@@ -30,7 +30,7 @@ const App = () => {
 
   const fetchAdmin = async () => {
     try {
-      const result = await axios.get("http://localhost:3000/admin/getAdmin", {
+      const result = await axios.get(`${API}/admin/getAdmin`, {
         withCredentials: true,
       });
       dispatch(addAdmin(result.data));
