@@ -7,7 +7,7 @@ const generateTokenAndCookie = (res, user) => {
         email: user.email,
     }
     const token = jwt.sign(payload, process.env.JWT_SECRET);
-    res.cookie("token", token, token, {
+    res.cookie("token", token, {
         httpOnly: true,
         secure: true,                  // MUST be true for SameSite=None
         sameSite: "None",              // Required for cross-origin

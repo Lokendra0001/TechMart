@@ -8,7 +8,7 @@ const generateTokenAndAdminCookie = (res, admin) => {
         email: admin.email,
     }
     const token = jwt.sign(payload, process.env.JWT_SECRET);
-    res.cookie("adminToken", token, token, {
+    res.cookie("adminToken", token, {
         httpOnly: true,
         secure: true,                  // MUST be true for SameSite=None
         sameSite: "None",              // Required for cross-origin
