@@ -5,7 +5,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { removeAdmin } from "../store/slices/adminSlice";
 import { handleErrorMsg } from "../utils/ToastFunc";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const AdminProfile = () => {
   const navigate = useNavigate();

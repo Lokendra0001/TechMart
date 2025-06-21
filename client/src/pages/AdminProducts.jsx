@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { useSelector } from "react-redux";
 import { handleErrorMsg } from "../utils/ToastFunc";
-import apiObj from "../../config";
+import apiObj from "../config";
 import { NavLink } from "react-router-dom";
 
 const AdminProducts = () => {
@@ -52,7 +52,10 @@ const AdminProducts = () => {
           </div>
         </div>
 
-        <NavLink to="/add-products" className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors">
+        <NavLink
+          to="/add-products"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors"
+        >
           <PlusCircle className="w-4 h-4" />
           <span className="text-sm">Add Product</span>
         </NavLink>

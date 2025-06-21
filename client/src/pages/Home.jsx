@@ -9,7 +9,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { ProductSection, Card, Container } from "../components/Index";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const Home = () => {
   const [data, setData] = useState([]);

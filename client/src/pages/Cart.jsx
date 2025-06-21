@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { OrderSummary, CartCard } from "../components/Index";
 import { addUser } from "../store/slices/authSlice";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const Cart = () => {
   const user = useSelector((state) => state.auth.user);

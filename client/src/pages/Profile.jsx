@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { addUser } from "../store/slices/authSlice.js";
 import axios from "axios";
 import { CartCard } from "../components/Index.jsx";
-import apiObj from "../../config.js";
+import apiObj from "../config.js";
 
 const Profile = () => {
   const [hideBtn, setHideBtn] = useState(true);

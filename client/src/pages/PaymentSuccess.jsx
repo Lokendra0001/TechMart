@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../store/slices/authSlice";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const PaymentSuccess = () => {
   const user = useSelector((state) => state.auth.user);

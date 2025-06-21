@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { handleSuccessMsg } from "../utils/ToastFunc";
 import { FiUpload, FiDollarSign, FiPercent } from "react-icons/fi";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const AddProduct = () => {
   const {

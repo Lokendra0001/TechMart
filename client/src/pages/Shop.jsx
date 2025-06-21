@@ -4,7 +4,7 @@ import { Select, Card, Container } from "../components/Index";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const Shop = () => {
   const [originalData, setOriginalData] = useState([]);

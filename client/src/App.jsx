@@ -8,15 +8,17 @@ import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "./store/slices/authSlice";
 import { addAdmin, removeAdmin } from "./store/slices/adminSlice";
 import { useState } from "react";
-import apiObj from "../config";
+import apiObj from "./config";
 
 const App = () => {
   const location = useLocation();
   const [authLoading, setAuthLoading] = useState(true);
   const dispatch = useDispatch();
+  const API = apiObj.apiString;
+
   const fetchUser = async () => {
     try {
-      const result = await axios.get("http://localhost:3000/user/getUser", {
+      const result = await axios.get(`${API}/user/getUser`, {
         withCredentials: true,
       });
       dispatch(addUser(result.data));

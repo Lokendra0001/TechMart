@@ -7,7 +7,7 @@ import { Card } from "../components/Index";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../store/slices/authSlice";
 import { handleErrorMsg, handleSuccessMsg } from "../utils/ToastFunc";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);

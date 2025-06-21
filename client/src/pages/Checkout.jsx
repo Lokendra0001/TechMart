@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Input, OrderSummary, StripeButton } from "../components/Index";
 import { ChevronLeft, Truck } from "lucide-react";
 import { useForm } from "react-hook-form";
-import apiObj from "../../config";
+import apiObj from "../config";
 
 const Checkout = () => {
   const navigate = useNavigate();

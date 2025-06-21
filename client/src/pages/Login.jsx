@@ -9,7 +9,7 @@ import { Alert } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../store/slices/authSlice.js";
 import { addAdmin } from "../store/slices/adminSlice.js";
-import apiObj from "../../config.js";
+import apiObj from "../config.js";
 
 function Login() {
   const {
