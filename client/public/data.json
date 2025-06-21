@@ -1,0 +1,162 @@
+[
+  {
+    "productName": "iPhone 14 Pro",
+    "description": "Apple smartphone with A16 Bionic chip and advanced camera system.",
+    "price": 129999,
+    "discount": 10000,
+    "productImg": "https://images.unsplash.com/photo-1556656793-08538906a9f8",
+    "category": "Smartphone"
+  },
+  {
+    "productName": "Samsung Galaxy S23",
+    "description": "High-end Android phone with stunning display and performance.",
+    "price": 89999,
+    "discount": 8000,
+    "productImg": "https://images.pexels.com/photos/4042800/pexels-photo-4042800.jpeg",
+    "category": "Smartphone"
+  },
+  {
+    "productName": "OnePlus 11",
+    "description": "Flagship killer with Snapdragon 8 Gen 2 and fast charging.",
+    "price": 61999,
+    "discount": 6000,
+    "productImg": "https://images.pexels.com/photos/4042801/pexels-photo-4042801.jpeg",
+    "category": "Smartphone"
+  },
+  {
+    "productName": "Sony WH-1000XM5",
+    "description": "Industry-leading noise cancelling headphones.",
+    "price": 29999,
+    "discount": 4500,
+    "productImg": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+    "category": "Headphones"
+  },
+  {
+    "productName": "Apple MacBook Air M2",
+    "description": "Ultra\u2011portable laptop with M2 chip and Retina display.",
+    "price": 114999,
+    "discount": 9000,
+    "productImg": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "category": "Laptop"
+  },
+  {
+    "productName": "Dell XPS 13",
+    "description": "Premium ultrabook with InfinityEdge display and great performance.",
+    "price": 99999,
+    "discount": 7500,
+    "productImg": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "category": "Laptop"
+  },
+  {
+    "productName": "Samsung Galaxy Watch 6",
+    "description": "Smartwatch with fitness tracking and AMOLED display.",
+    "price": 28999,
+    "discount": 4000,
+    "productImg": "https://images.pexels.com/photos/277394/pexels-photo-277394.jpeg",
+    "category": "Smartwatch"
+  },
+  {
+    "productName": "Apple Watch Series 9",
+    "description": "Latest Apple Watch with new health features and watchOS 10.",
+    "price": 44999,
+    "discount": 3500,
+    "productImg": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b",
+    "category": "Smartwatch"
+  },
+  {
+    "productName": "Canon EOS R10",
+    "description": "Mirrorless camera with 24.2\u202fMP and 4K video.",
+    "price": 84999,
+    "discount": 7000,
+    "productImg": "https://images.unsplash.com/photo-1500048993953-df028f6a91b5",
+    "category": "Camera"
+  },
+  {
+    "productName": "Sony Alpha ZV-E10",
+    "description": "Vlogging camera with interchangeable lenses and 4K video.",
+    "price": 67999,
+    "discount": 5000,
+    "productImg": "https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg",
+    "category": "Camera"
+  },
+  {
+    "productName": "LG 55-inch 4K Smart TV",
+    "description": "Ultra HD TV with WebOS and AI ThinQ.",
+    "price": 64999,
+    "discount": 9000,
+    "productImg": "https://images.pexels.com/photos/110954/pexels-photo-110954.jpeg",
+    "category": "Television"
+  },
+  {
+    "productName": "Samsung 50-inch Crystal 4K TV",
+    "description": "Vivid display and smart features in a sleek design.",
+    "price": 59999,
+    "discount": 8500,
+    "productImg": "https://images.pexels.com/photos/129112/pexels-photo-129112.jpeg",
+    "category": "Television"
+  },
+  {
+    "productName": "Bose SoundLink Revolve+ II",
+    "description": "360\u00b0 Bluetooth speaker with deep sound.",
+    "price": 24999,
+    "discount": 3000,
+    "productImg": "https://images.unsplash.com/photo-1570815053042-3a82d9dc827f",
+    "category": "Speaker"
+  },
+  {
+    "productName": "JBL Flip 6",
+    "description": "Portable waterproof speaker with powerful sound.",
+    "price": 10999,
+    "discount": 1500,
+    "productImg": "https://images.unsplash.com/photo-1612881236394-9b85c5d8f1c9",
+    "category": "Speaker"
+  },
+  {
+    "productName": "HP Pavilion 15",
+    "description": "Everyday laptop with Intel i5 and 8GB RAM.",
+    "price": 56999,
+    "discount": 5000,
+    "productImg": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "category": "Laptop"
+  },
+  {
+    "productName": "Realme Buds Air 5 Pro",
+    "description": "True wireless earbuds with ANC and LDAC.",
+    "price": 4999,
+    "discount": 1000,
+    "productImg": "https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg",
+    "category": "Earbuds"
+  },
+  {
+    "productName": "Mi Band 7",
+    "description": "Fitness tracker with AMOLED display and SpO2 monitor.",
+    "price": 3499,
+    "discount": 500,
+    "productImg": "https://images.pexels.com/photos/5075101/pexels-photo-5075101.jpeg",
+    "category": "Smart Band"
+  },
+  {
+    "productName": "Logitech MX Master 3S",
+    "description": "Ergonomic wireless mouse with precision scroll wheel.",
+    "price": 8499,
+    "discount": 1000,
+    "productImg": "https://images.unsplash.com/photo-1580795471213-49cbc0920053",
+    "category": "Accessories"
+  },
+  {
+    "productName": "Samsung T7 SSD 1TB",
+    "description": "Portable SSD with fast transfer speeds and compact design.",
+    "price": 9999,
+    "discount": 1500,
+    "productImg": "https://images.pexels.com/photos/4042802/pexels-photo-4042802.jpeg",
+    "category": "Storage"
+  },
+  {
+    "productName": "ASUS ROG Strix G16",
+    "description": "Gaming laptop with RTX graphics and fast refresh rate.",
+    "price": 124999,
+    "discount": 12000,
+    "productImg": "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+    "category": "Laptop"
+  }
+]
