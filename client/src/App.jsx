@@ -48,12 +48,16 @@ const App = () => {
     window.scrollTo({ top: 0, behaviour: "smooth" });
   }, [location.pathname]);
 
-  if (authLoading) return;
-  <div>
-    <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+  if (authLoading)
+    return (
+      <div>
+        <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
 
-    <p className="mt-4 text-gray-600">Loading your shopping experience...</p>
-  </div>; // This prevent to load the below pages before the authloading set to the false. jab tak data user ya admin ka aa nahi jata ya phir data na bhi ho to vo jo time lagega fetch me us time tak ham below pages ko run nahi karege jab hojaega then ham usko run karege bhale user ho na ho admin hona ho ise hame login page pe jab private route se tabhi jayega jab user nahi hoga login me hame baar barr check karne ki jarurat bahi padega.
+        <p className="mt-4 text-gray-600">
+          Loading your shopping experience...
+        </p>
+      </div>
+    ); // This prevent to load the below pages before the authloading set to the false. jab tak data user ya admin ka aa nahi jata ya phir data na bhi ho to vo jo time lagega fetch me us time tak ham below pages ko run nahi karege jab hojaega then ham usko run karege bhale user ho na ho admin hona ho ise hame login page pe jab private route se tabhi jayega jab user nahi hoga login me hame baar barr check karne ki jarurat bahi padega.
 
   return (
     <>

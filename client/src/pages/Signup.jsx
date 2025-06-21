@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserPlus, ShieldCheck, Rocket, Zap, LogInIcon } from "lucide-react";
 import axios from "axios";
 import { handleErrorMsg, handleSuccessMsg } from "../utils/ToastFunc.js";
-import apiObj from "../config.js";
+import apiObj from "../config";
 
 function Signup() {
   const user = useSelector((state) => state.auth.user);

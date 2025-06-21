@@ -32,9 +32,8 @@ const ProductDetail = () => {
   }, [id]);
 
   const handleAddToCart = async (id) => {
-
     try {
-      const res = await axios.patch("http://localhost:3000/user/addToCart", {
+      const res = await axios.patch(`${API}/user/addToCart`, {
         id,
         email: user?.email,
       });
