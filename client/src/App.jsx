@@ -61,7 +61,7 @@ const App = () => {
 
           {/* TechMart Text Animation */}
           <h1 className="text-4xl  font-bold animate-[textReveal_1.5s_ease-out] flex items-center gap-0.5">
-            <Zap size={35} className="text-indigo-500" />
+            <Zap size={35} className="text-indigo-500 animate-none" />
             {["T", "e", "c", "h", "M", "a", "r", "t"].map((letter, index) => (
               <span
                 key={index}

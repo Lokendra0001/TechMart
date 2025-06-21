@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-const allowedOrigins = ['http://localhost:5173', 'https://tech-mart-seven.vercel.app/', 'https://techmart-4rsb.onrender.com'];
+const allowedOrigins = ['http://localhost:5173', 'https://tech-mart-swart.vercel.app/', 'https://techmart-4rsb.onrender.com'];
 
 app.use(cors({
     origin: function (origin, callback) {
