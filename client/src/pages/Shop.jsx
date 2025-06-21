@@ -4,7 +4,7 @@ import { Select, Card, Container } from "../components/Index";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import apiObj from "../config";
+import apiObj from ".././config";
 
 const Shop = () => {
   const [originalData, setOriginalData] = useState([]);
@@ -12,7 +12,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loader, setLoader] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pagesPer, setPagesPer] = useState(8);
+  const [pagesPer, setPagesPer] = useState(12);
   const [noOfPages, setNoOfPages] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState("Relevance");
@@ -72,7 +72,7 @@ const Shop = () => {
 
     setProducts(paginated);
     setNoOfPages(Math.ceil(filtered.length / pagesPer));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   }, [originalData, selectedCategory, selectedPrice, currentPage, search]);
 
   useEffect(() => {
