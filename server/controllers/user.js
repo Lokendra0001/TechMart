@@ -31,7 +31,7 @@ const handleLoginUser = async (req, res) => {
 
         generateTokenAndCookie(res, user);
 
-        res.clearCookie("adminToken", token, {
+        res.clearCookie("adminToken", {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production", // Send cookie over HTTPS only in production
             sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // None for cross-origin, Lax for local dev
