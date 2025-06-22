@@ -368,9 +368,9 @@ const Profile = () => {
           {orders.map((order, orderIndex) =>
             order.products.map((item, productIndex) => (
               <CartCard
-                key={`${orderIndex}-${productIndex}`} // ✅ unique key per item
-                product={item.product} // ✅ full product details
-                qty={item.quantity} // ✅ quantity
+                key={`${orderIndex}-${productIndex}`} 
+                product={item.product}
+                qty={item.quantity} 
                 isOrder={true}
                 orderDate={order.createdAt}
               />

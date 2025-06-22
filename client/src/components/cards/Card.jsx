@@ -12,20 +12,20 @@ const Card = ({ product, qty = 0, isAdmin = false }) => {
   return (
     <NavLink
       to={`/product/${product._id}`}
-      className={` w-full  sm:w-62  h-37 sm:flex-col sm:h-90 sm:rounded-xl flex  overflow-hidden sm:shadow-lg shadow-md bg-indigo-100 select-none  ${
+      className={` w-full  sm:w-62  h-40 sm:flex-col sm:h-90 sm:rounded-xl flex  overflow-hidden  shadow-sm bg-sky-50 select-none  ${
         isAdmin && "pointer-events-auto select-none"
       }`}
     >
       {/* Image */}
       <div
         className={`relative sm:h-50 
-         w-2/5 sm:w-full
+         w-2/5 sm:w-full flex justify-center items-center
    overflow-hidden`}
       >
         <img
           src={product.productImg[0]}
           alt={product.productName}
-          className="w-full h-full object-contain object-center"
+          className="w-full h-2/3 sm:h-full object-contain object-center"
         />
         {isNew && (
           <span className="absolute top-2 left-2 bg-gradient-to-br from-indigo-600 to-purple-500 text-white text-[8px] sm:text-xs px-2 py-1 rounded">
@@ -35,7 +35,7 @@ const Card = ({ product, qty = 0, isAdmin = false }) => {
       </div>
 
       {/* Content */}
-      <div className="py-1 px-2 bg-white w-2/3 sm:w-full sm:rounded-tr-2xl sm:rounded-tl-2xl flex flex-col gap-1 sm:gap-2 sm:h-45 justify-around">
+      <div className="py-1 px-2 bg-white w-2/3 sm:w-full sm:rounded-tr-2xl sm:rounded-tl-2xl flex flex-col gap-1 sm:gap-2 sm:h-47 justify-around">
         <div>
           <p className="text-[10px] sm:text-xs font-semibold text-gray-500 tracking-wide">
             {product.category}

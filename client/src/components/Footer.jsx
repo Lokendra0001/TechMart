@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 const quickLinks = [
   { label: "Home", path: "/" },
   { label: "Shop", path: "/shop" },
-  { label: "Deals", path: "/deals" },
-  { label: "About Us", path: "/about" },
   { label: "Contact", path: "/contact" },
+  { label: "About Us", path: "/about" },
 ];
 
 const categories = [
@@ -37,7 +36,9 @@ const Footer = () => {
               <Facebook className="text-gray-600 hover:text-blue-700 cursor-pointer" />
               <Twitter className="text-gray-600 hover:text-sky-700 cursor-pointer" />
               <Instagram className="text-gray-600 hover:text-indigo-600 cursor-pointer" />
-              <Linkedin className="text-gray-600 hover:text-sky-500 cursor-pointer" />
+              <a href="https://linkedin.com/in/lokendrarajpurohit" target="_blank">
+                <Linkedin className="text-gray-600 hover:text-sky-500 cursor-pointer" />
+              </a>
             </div>
           </div>
 
@@ -113,15 +114,12 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Tech Mart. All rights reserved.
           </p>
           <div className="flex gap-4 text-sm">
-            {["Privacy Policy", "Shipping Policy"].map((text) => (
-              <NavLink
-                key={text}
-                to="#"
-                className="text-gray-600 font-semibold hover:text-blue-600 transition"
-              >
-                {text}
-              </NavLink>
-            ))}
+            <NavLink
+              to="/privacy-policy"
+              className="text-gray-600 font-semibold hover:text-blue-600 transition"
+            >
+              Privacy Policy
+            </NavLink>
           </div>
         </div>
       </div>

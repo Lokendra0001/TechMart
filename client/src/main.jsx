@@ -32,6 +32,21 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "", element: <Home /> },
+      { path: "/shop", element: <Shop /> },
+      { path: "/contact", element: <ContactUs /> },
+      { path: "/about", element: <About /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+      { path: "/product/:id", element: <ProductDetail /> },
+      {
+        path: "/profile",
+        element: (
+          <UserPrivateRoute>
+            <Profile />
+          </UserPrivateRoute>
+        ),
+      },
       {
         path: "/cart",
         element: (
@@ -40,13 +55,6 @@ const router = createBrowserRouter([
           </UserPrivateRoute>
         ),
       },
-      { path: "/shop", element: <Shop /> },
-      { path: "/product/:id", element: <ProductDetail /> },
-      { path: "/about", element: <About /> },
-      { path: "/privacyPolicy", element: <PrivacyPolicy /> },
-      { path: "/contact", element: <ContactUs /> },
-      { path: "/login", element: <Login /> },
-      { path: "/signup", element: <Signup /> },
       {
         path: "/cart/checkout",
         element: (
@@ -72,14 +80,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/admin-profile",
-        element: (
-          <AdminPrivateRoute>
-            <AdminProfile />
-          </AdminPrivateRoute>
-        ),
-      },
-      {
         path: "/add-products",
         element: (
           <AdminPrivateRoute>
@@ -88,11 +88,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/profile",
+        path: "/admin-profile",
         element: (
-          <UserPrivateRoute>
-            <Profile />
-          </UserPrivateRoute>
+          <AdminPrivateRoute>
+            <AdminProfile />
+          </AdminPrivateRoute>
         ),
       },
     ],

@@ -83,14 +83,10 @@ const CartCard = ({
 
   return (
     <div
-      onClick={() => !isOrder && navigate(`/product/${product._id}`)}
-      className="w-full border-l-4 border-l-indigo-500 px-4 py-4 bg-white hover:shadow-sm transition-shadow duration-200 rounded-md border border-gray-300"
+      onClick={() => navigate(`/product/${product._id}`)}
+      className="w-full border-l-4 border-l-indigo-500 px-4 py-4 cursor-pointer bg-white hover:shadow-sm transition-shadow duration-200 rounded-md border border-gray-300"
     >
-      <div
-        className={`grid grid-cols-12 gap-4 items-center ${
-          isOrder ? "select-none pointer-events-none" : "cursor - pointer"
-        }`}
-      >
+      <div className={`grid grid-cols-12 gap-4 items-center `}>
         {/* Image & Info */}
         <div className="col-span-12 sm:col-span-6 flex items-center gap-4">
           <img

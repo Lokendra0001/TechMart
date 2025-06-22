@@ -57,7 +57,7 @@ const App = () => {
         {/* App Logo Container */}
         <div className="relative  h-24  flex justify-center items-center">
           {/* Pulsing Circle Background */}
-          <div className="absolute w-full h-full rounded-full bg-indigo-100 animate-pulse"></div>
+          <div className="absolute w-full h-full rounded-full animate-pulse"></div>
 
           {/* TechMart Text Animation */}
           <h1 className="text-4xl  font-bold animate-[textReveal_1.5s_ease-out] flex items-center gap-0.5">

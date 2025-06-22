@@ -47,7 +47,11 @@ const ProductDetail = () => {
   const discountedPrice = product?.price - product?.discount;
 
   if (!product) {
-    return <div className="p-10 text-center">Loading product...</div>;
+    return (
+      <div className="p-10 text-center font-semibold h-screen grid place-items-center">
+        Loading product...
+      </div>
+    );
   }
 
   return (
@@ -56,7 +60,7 @@ const ProductDetail = () => {
       <header className="py-2 sm:py-4 px-6 sticky top-[10dvh] z-20 ">
         <button
           onClick={() => navigate(-1)}
-          className="flex  items-center font-medium backdrop-blur-xs px-2 text-blue-500 hover:text-blue-700 cursor-pointer"
+          className="flex  items-center font-medium bg-white rounded-2xl px-2 text-blue-500 hover:text-blue-700 cursor-pointer"
         >
           <ChevronLeft size={20} />
           Back

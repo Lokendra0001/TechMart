@@ -10,6 +10,7 @@ import {
   X,
   Headphones,
   PlusCircle,
+  LogIn,
 } from "lucide-react";
 import { RiAdminLine, RiMenu4Fill } from "react-icons/ri";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -60,7 +61,7 @@ const Nav = () => {
       <div className=" z-50  bg-white ">
         {/* Top Promo Banner */}
         <div className="bg-gradient-to-br from-indigo-500 to-blue-500 text-white text-center py-1 text-xs sm:text-sm font-medium">
-          🚀 Free shipping on orders over $399 | Limited time offer!
+          🚀 Free shipping on orders above ₹499 | Limited time offer!
         </div>
       </div>
       {/* Main Navigation */}
@@ -177,9 +178,10 @@ const Nav = () => {
                     className={({ isActive }) =>
                       `  ${
                         isActive && "bg-blue-600 text-white"
-                      } rounded-sm  relative px-2 sm:px-3 text-sm py-0.5 border-2 border-blue-600 hover:bg-blue-600 hover:text-white font-semibold`
+                      } rounded-sm flex items-center gap-1 hover:text-blue-600 text-gray-700 relative px-2 sm:px-3 text-md py-0.5  border-blue-600  font-semibold`
                     }
                   >
+                    <LogIn size={17}/>
                     <button className={`cursor-pointer `}>Login</button>
                   </NavLink>
                 )}
